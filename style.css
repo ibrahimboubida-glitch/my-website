@@ -1,0 +1,541 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #061916;
+    color: white;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   الهيدر
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(6, 25, 22, 0.96);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #163d36;
+}
+
+.header {
+    max-width: 1100px;
+    margin: auto;
+
+    padding: 18px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #00d6b5;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.menu-button {
+    border: none;
+    background: transparent;
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   القائمة
+========================= */
+
+nav {
+    display: none;
+
+    background: #08221e;
+    padding: 15px 20px;
+}
+
+nav.active {
+    display: block;
+}
+
+nav a {
+    display: block;
+
+    color: white;
+    text-decoration: none;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background: #0d3932;
+    color: #00d6b5;
+}
+
+
+/* =========================
+   الرئيسية
+========================= */
+
+.hero {
+    min-height: 90vh;
+
+    padding: 70px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.profile {
+    width: 160px;
+    height: 160px;
+
+    border: 4px solid #00d6b5;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 65px;
+    font-weight: bold;
+
+    box-shadow:
+        0 0 35px rgba(0, 214, 181, 0.2),
+        inset 0 0 25px rgba(0, 214, 181, 0.08);
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-top: 25px;
+}
+
+.username {
+    color: #00d6b5;
+    font-size: 20px;
+
+    direction: ltr;
+}
+
+.welcome {
+    margin-top: 25px;
+    font-size: 25px;
+}
+
+.description {
+    max-width: 600px;
+
+    color: #a9bab6;
+
+    margin: 10px auto 30px;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   الأزرار
+========================= */
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    width: 100%;
+    max-width: 320px;
+}
+
+.btn {
+    display: block;
+
+    text-decoration: none;
+    text-align: center;
+
+    padding: 15px 20px;
+
+    border-radius: 50px;
+
+    font-weight: bold;
+    font-size: 17px;
+
+    transition: 0.25s;
+}
+
+.primary {
+    background: #00cdb0;
+    color: white;
+
+    box-shadow: 0 8px 25px rgba(0, 205, 176, 0.15);
+}
+
+.secondary {
+    border: 1px solid #31544e;
+    color: white;
+    background: transparent;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   الإحصائيات
+========================= */
+
+.stats {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    width: 100%;
+    max-width: 700px;
+
+    margin-top: 45px;
+}
+
+.stat {
+    background: #0a2823;
+
+    border: 1px solid #163d36;
+
+    border-radius: 20px;
+
+    padding: 20px 10px;
+
+    text-align: center;
+}
+
+.number {
+    color: #00d6b5;
+
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+.label {
+    color: #91a6a1;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   الأقسام
+========================= */
+
+section {
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 80px 20px;
+}
+
+.title {
+    text-align: center;
+
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+
+    color: #899f9a;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   عن القناة
+========================= */
+
+.about-box {
+    background: #0a2823;
+
+    border: 1px solid #163d36;
+
+    border-radius: 25px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+}
+
+.verse {
+    color: #00d6b5;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+}
+
+.about-box p {
+    color: #b4c3c0;
+
+    font-size: 17px;
+
+    margin-top: 15px;
+}
+
+
+/* =========================
+   الفيديوهات
+========================= */
+
+.videos {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.video {
+    min-height: 280px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #104139,
+            #061512
+        );
+
+    border: 1px solid #214a42;
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    text-decoration: none;
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+.video:hover {
+    transform: translateY(-5px);
+
+    border-color: #00d6b5;
+}
+
+.play {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    background: #00cdb0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+
+    margin-bottom: auto;
+}
+
+.video h3 {
+    font-size: 21px;
+
+    margin-top: 20px;
+}
+
+.video p {
+    color: #91a6a1;
+
+    margin-top: 5px;
+}
+
+
+/* =========================
+   المتابعة
+========================= */
+
+.follow {
+    text-align: center;
+}
+
+.follow-box {
+    background: #0a2823;
+
+    border: 1px solid #163d36;
+
+    border-radius: 25px;
+
+    padding: 50px 20px;
+}
+
+.follow-box h2 {
+    font-size: 32px;
+}
+
+.follow-box p {
+    color: #9eb0ac;
+
+    margin: 10px 0 25px;
+}
+
+.follow-btn {
+    display: inline-block;
+
+    background: #00cdb0;
+
+    color: white;
+
+    padding: 15px 35px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.25s;
+}
+
+.follow-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   الفوتر
+========================= */
+
+footer {
+    border-top: 1px solid #163d36;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    color: #718682;
+}
+
+footer strong {
+    color: #00d6b5;
+
+    font-size: 22px;
+}
+
+
+/* =========================
+   زر الأعلى
+========================= */
+
+#topButton {
+    position: fixed;
+
+    bottom: 20px;
+    left: 20px;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #00cdb0;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    display: none;
+
+    z-index: 500;
+}
+
+#topButton.show {
+    display: block;
+}
+
+
+/* =========================
+   الهاتف
+========================= */
+
+@media (max-width: 700px) {
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .profile {
+        width: 145px;
+        height: 145px;
+
+        font-size: 58px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat:last-child {
+        grid-column: 1 / -1;
+
+        width: 50%;
+
+        margin: auto;
+    }
+
+    .videos {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .verse {
+        font-size: 21px;
+    }
+
+    .video {
+        min-height: 260px;
+    }
+}
